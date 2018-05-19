@@ -5,12 +5,22 @@ module.exports = {
     get: function (req, res) {
       // Right now this is just a basic response
       // Will need to change this to a response with data from the db
-      console.log('The request got to messages.get');
+    
+      // Invoke models.messages.get
+      models.messages.get();
+    
+      console.log('In Controllers: messages.get');
       res.writeHead(200, {'Content-Type': 'application/json'});
       res.end();
     }, // a function which handles a get request for all messages
     post: function (req, res) {
-      console.log('The request got to messages.post');
+      // Right now this is just a basic response
+      // Will need to change this to a response with data from the db
+        
+      // Invoke models.messages.post
+      models.messages.post();    
+  
+      console.log('In Controllers: messages.post');
       res.writeHead(201, {'Content-Type': 'application/json'});
       res.end();
     } // a function which handles posting a message to the database
